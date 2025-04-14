@@ -28,12 +28,25 @@ Install the text file FIRST!! before running any of the scripts or else it won't
 - It helps to identify house pets i.e cats and dogs
 - It works in low light conditiosn like at night
 
-### [Youtube Link]
-I have provided a youtube link where I demo the application, you can see the full capabilities and the functions of my application via the link below:
+## Dataset
+[UCF-Crime Dataset](https://webpages.charlotte.edu/cchen62/dataset.html)
 
+## Architecture
+#### Model Architecture
+A video consists of an ordered sequence of frames. Each frame contains spatial information, and the sequence of those frames contains temporal information. To model both of these aspects, we use a hybrid architecture that consists of convolutions (for spatial processing) as well as recurrent layers (for temporal processing).
+
+The first model i.e., CNN will be used to extract the (spatial) features and convert them into an encoded feature vector hence called an encoder. Similarly, the second model i.e., RNN will be used to process mini-batches of encoded frames to get the final classification result hence called a decoder.
+
+
+#### Video Processing Pipeline
+For real-time video monitoring, an efficient video streaming pipeline is required to handle the video stream from CCTV in parallel to the inference of models using those frames and make the best use of available hardware resources to minimize latency. Hence in video streaming engine, we used multiprocessing to create two different parallel processes, one of them handles the video streaming from CCTV or any other video input device and the other process will handle the inference engine for parallel analyzing the video frames for classification.
+
+
+
+## Training
 
 ### [Output Images]
-Here are the output screenshots from my app:
+Here are the output screenshots from the app:
 
 [*Video Playlist GUI*]
 ![Video_Playlist_GUI](https://github.com/RoninSanta/CM3070-Camera-Surveillance-System-Project/assets/109457795/3610c982-b157-491a-b991-e6dc27d6ae72)
