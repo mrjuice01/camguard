@@ -64,4 +64,4 @@ Here are the output screenshots from the app:
 - The yolov3.weights is currently over 200MB therefore, you might have an issue trying to download it
 - However, it is very crucial since it contains the pre-trained model for the classifier
 
-
+                                                  `Designed by © cybertech`
